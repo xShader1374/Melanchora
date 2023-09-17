@@ -1,5 +1,5 @@
 body {
-  background-color: #1f1f1f;
+  background-color: #f8f9fa;
 }
 
 .header {
@@ -9,9 +9,39 @@ body {
   text-align: center;
 }
 
+.logo {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+  animation: logoAnimation 1s ease-in-out;
+}
+
+@keyframes logoAnimation {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .game-container {
   text-align: center;
   margin-top: 50px;
+  animation: containerAnimation 1s ease-in-out;
+}
+
+@keyframes containerAnimation {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .game-title {
@@ -28,15 +58,25 @@ body {
 .play-button {
   font-size: 24px;
   padding: 10px 30px;
-  background-color: #007bff98;
+  background-color: #007bff;
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+  animation: buttonAnimation 1s ease-in-out infinite alternate;
+}
+
+@keyframes buttonAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
 }
 
 .play-button:hover {
-  background-color: #0057b3a6;
+  background-color: #0056b3;
 }
 
 .footer {
